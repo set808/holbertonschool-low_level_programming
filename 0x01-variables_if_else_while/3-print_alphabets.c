@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the lowercase alphabet followed by a newline
+ * main - prints the lowercase alphabet, then the uppercase alphabet
+ * followed by a newline
  * Return: returns 0
  */
 int main(void)
