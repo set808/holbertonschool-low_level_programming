@@ -7,12 +7,7 @@
  */
 int main(void)
 {
-	int ones;
-	int tens;
-	int hundreds;
-	int count;
-	int one_count;
-	int ten_count;
+	int ones, tens, hundreds, count, one_count, ten_count;
 
 	ones = 2;
 	tens = 1;
@@ -26,7 +21,7 @@ int main(void)
 		{
 			while (ones <= 9)
 			{
-				if ( tens != 1 || ones != 2)
+				if (tens != 1 || ones != 2)
 				{
 					putchar(',');
 					putchar(' ');
