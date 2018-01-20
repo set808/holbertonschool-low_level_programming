@@ -12,9 +12,9 @@ int main(void)
 
 	count1 = 0;
 	count2 = count1 + 1;
-	while(count1 <= 98)
+	while (count1 <= 98)
 	{
-		while(count2 <= 99)
+		while (count2 <= 99)
 		{
 			putchar((count1 / 10) + '0');
 			putchar((count1 % 10) + '0');
