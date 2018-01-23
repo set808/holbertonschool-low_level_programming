@@ -9,17 +9,17 @@
 int  main(void)
 {
 	int i;
-	long long x, y, z;
+	float x, y, z;
 
 	x = 1;
 	y = 2;
 
-	printf("%lli, ", x);
-	printf("%lli", y);
+	printf("%f, ", x);
+	printf("%f", y);
 	for (i = 0; i < 48; i++)
 	{
 		z = x + y;
-		printf(", %lli", z);
+		printf(", %.0f", z);
 		x = y;
 		y = z;
 	}
