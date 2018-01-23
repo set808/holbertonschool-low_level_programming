@@ -14,8 +14,8 @@ int  main(void)
 	x = 1;
 	y = 2;
 
-	printf("%f, ", x);
-	printf("%f", y);
+	printf("%.0f, ", x);
+	printf("%.0f", y);
 	for (i = 0; i < 48; i++)
 	{
 		z = x + y;
