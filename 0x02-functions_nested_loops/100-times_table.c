@@ -44,14 +44,9 @@ void format_product(int x, int y)
 void format_row(int multiplier, int multiplicand)
 {
 	if (multiplier != multiplicand)
-	{
 		_putchar(',');
-		_putchar(' ');
-	}
 	else
-	{
 		_putchar('\n');
-	}
 }
 
 /**
