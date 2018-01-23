@@ -7,13 +7,15 @@
 
 int main(void)
 {
-	int i, array_length;
-	char holberton[] = "Holberton";;
-
-	array_length = sizeof(holberton) / sizeof(char);
-
-	for (i = 0; i < array_length; i++)
-		_putchar(holberton[i]);
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
 	_putchar('\n');
 	return (0);
 }
