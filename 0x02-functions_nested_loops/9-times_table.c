@@ -34,14 +34,9 @@ void format_product(int x, int y)
 void format_row(int y)
 {
 	if (y != 9)
-	{
 		_putchar(',');
-		_putchar(' ');
-	}
 	else
-	{
 		_putchar('\n');
-	}
 }
 
 /**
