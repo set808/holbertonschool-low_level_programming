@@ -3,6 +3,7 @@
 /**
  * main - prints the Fizz-Buzz test
  *
+ * Return: Always 0
  */
 
 int main(void)
@@ -20,7 +21,7 @@ int main(void)
 		else
 			printf("%d", x);
 
-		if ( x != 100)
+		if (x != 100)
 			putchar(' ');
 		else
 			putchar('\n');
