@@ -2,7 +2,7 @@
 
 /**
  * print_square - prints a square in terminal
- * @n: the number of times the character '\' is to be printed
+ * @size: the size of the square
  *
  */
 
