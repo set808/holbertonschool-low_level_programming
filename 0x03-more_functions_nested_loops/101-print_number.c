@@ -2,6 +2,7 @@
 
 /**
  * print_number - takes an integer and prints it to the screen
+ * @n: number to be printed
  *
  */
 
