@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * print_number - takes an integer and prints it to the screen
+ *
+ */
+
 void print_number(int n)
 {
 	int digit, count, temp;
