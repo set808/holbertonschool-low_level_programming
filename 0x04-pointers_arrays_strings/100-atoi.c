@@ -24,19 +24,14 @@ int is_digit(char c)
 
 int _atoi(char *s)
 {
-	int sign = 0;
-	unsigned int number = 0;
-
+	int sign = 1;
+	unsigned int num = 0;
 
 	while (*s)
 	{
-		if (*s == '+')
+		if (*s == '-')
 		{
-			sign++;
-		}
-		else if (*s == '-')
-		{
-			sign--;
+			sign *= -1;
 		}
 		else if (is_digit(*s))
 		{
@@ -47,12 +42,12 @@ int _atoi(char *s)
 
 	while (is_digit(*s))
 	{
-		number *= 10;
-		number += *s - '0';
+		num *= 10;
+		num += *s - '0';
 		s++;
 	}
 
-	if (sign < 0)
-		number *= -1;
-	return (number);
+	if (sign  == -1)
+		num  = -num;
+	return (num);
 }
