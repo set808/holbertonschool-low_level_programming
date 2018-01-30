@@ -33,7 +33,7 @@ void puts_half(char *str)
 	{
 		half = (_strlen(temp) - 1) / 2;
 		odd_start = half + 1;
-		for (temp += odd_start; *temp != '\0'; tempp++)
+		for (temp += odd_start; *temp != '\0'; temp++)
 			_putchar(*temp);
 	}
 	else
