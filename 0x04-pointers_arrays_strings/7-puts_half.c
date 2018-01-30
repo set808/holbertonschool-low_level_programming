@@ -29,10 +29,10 @@ void puts_half(char *str)
 
 	temp = str;
 
-	if (_strlen(temp) % 2 == 0)
-		half = _strlen(temp) / 2;
-	else
+	if (_strlen(temp) % 2 != 0)
 		half = (_strlen(temp) - 1) / 2;
+	else
+		half = _strlen(temp) / 2;
 
 	for (temp += half; *temp != '\0'; temp++)
 		_putchar(*temp);
