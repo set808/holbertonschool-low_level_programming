@@ -24,17 +24,23 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-	int half;
+	int half, odd_start;
 	char *temp;
 
 	temp = str;
 
 	if (_strlen(temp) % 2 != 0)
+	{
 		half = (_strlen(temp) - 1) / 2;
+		odd_start = half + 1;
+		for (temp += odd_start; *temp != '\0'; tempp++)
+			_putchar(*temp);
+	}
 	else
+	{
 		half = _strlen(temp) / 2;
-
-	for (temp += half; *temp != '\0'; temp++)
-		_putchar(*temp);
+		for (temp += half; *temp != '\0'; temp++)
+			_putchar(*temp);
+	}
 	_putchar('\n');
 }
