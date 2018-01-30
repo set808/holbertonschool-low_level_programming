@@ -5,11 +5,13 @@
  * @dest: the destination pointer for the copied string
  * @src: the origin pointer of the copied string
  *
+ * Return: returns the pointer to dest
  */
 
 char *_strcpy(char *dest, char *src)
 {
 	char *temp = dest;
+
 	while (*src)
 	{
 		*dest  = *src;
