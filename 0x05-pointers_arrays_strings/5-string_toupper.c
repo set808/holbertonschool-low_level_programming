@@ -2,8 +2,9 @@
 
 /**
  * string_toupper - changes all lowercase letters of a string to uppercase
- * @s - string being modified
+ * @s: string being modified
  *
+ * Return: returns uppercase string
  */
 
 char *string_toupper(char *s)
@@ -13,7 +14,7 @@ char *string_toupper(char *s)
 
 	for (x = 0; *(s + x) != '\0'; x++)
 	{
-		if (*(s + x) >= 'a' && *(s+x) <= 'z')
+		if (*(s + x) >= 'a' && *(s + x) <= 'z')
 			*(s + x) += upper;
 	}
 
