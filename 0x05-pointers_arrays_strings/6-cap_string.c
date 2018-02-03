@@ -33,8 +33,10 @@ char *cap_string(char *s)
 	for (x = 0; *(s + x) != '\0'; x++)
 	{
 		if (*(s + x) >= 'a' && *(s + x) <= 'z')
+		{
 			if (*(s + x) == *s || is_sep(*(s + x - 1)))
-			    *(s + x) += upper;
+				*(s + x) += upper;
+		}
 	}
 	return (s);
 }
