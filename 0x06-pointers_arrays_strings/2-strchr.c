@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 	int x;
 	char *found = 0;
 
-	for (x = 0; *(s + x) != '\0'; x++)
+	for (x = 0; *(s + x + 1) != '\0'; x++)
 	{
 		if (*(s + x) == c)
 		{
