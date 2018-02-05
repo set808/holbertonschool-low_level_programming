@@ -21,11 +21,13 @@ char  *_strstr(char *haystack, char *needle)
 		if (*(haystack + x) == *needle)
 		{
 			matched = 1;
-			for (y = 0; *(needle + y + 1) != '\0'; y++)
+			for (y = 0; *(needle + y) != '\0'; y++)
 			{
 				if (*(haystack + x + y) != *(needle + y))
+				{
 					matched = 0;
 					break;
+				}
 			}
 			if (matched)
 			{
