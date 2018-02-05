@@ -11,7 +11,7 @@
 
 void print_diagsums(int *a, int size)
 {
-	int d1, d2, x, sum1, sum2 , *temp;
+	int d1, d2, x, sum1, sum2, *temp;
 
 	d1 = (size + 1);
 	d2 = (size - 1);
