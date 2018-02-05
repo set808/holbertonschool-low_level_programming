@@ -21,12 +21,12 @@ void print_number(int n)
 		digit /= 10;
 		tens *= 10;
 	}
-	for(digit = n; x >= 0; x--)
+	for (digit = n; x >= 0; x--)
 	{
 		if (digit / tens < 0)
 			_putchar((digit / tens) * -1 + '0');
 		else
-			_putchar ((digit /tens) + '0');
+			_putchar ((digit / tens) + '0');
 		digit %= tens;
 		tens /= 10;
 	}
