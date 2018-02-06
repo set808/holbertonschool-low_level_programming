@@ -11,33 +11,21 @@
 
 char  *_strstr(char *haystack, char *needle)
 {
-	unsigned int x, y, matched;
-	char *found = 0;
+	char *hp, *np;
 
-	matched = 0;
-
-	if (*needle == '\0')
-		return (found);
-
-	for (x = 0; *(haystack + x) != '\0'; x++)
+	while (*haystack != '\0')
 	{
-		if (*(haystack + x) == *needle)
+		hp = haystack;
+		np = needle;
+
+		while (*haystack != '\0' && *np != '\0' && *haystack == *np)
 		{
-			matched = 1;
-			for (y = 0; *(needle + y) != '\0'; y++)
-			{
-				if (*(haystack + x + y) != *(needle + y))
-				{
-					matched = 0;
-					break;
-				}
-			}
-			if (matched)
-			{
-				found = &*(haystack + x);
-				return (found);
-			}
+			haystack++;
+			np++;
 		}
+		if (*np == '\0')
+			return (hp);
+		haystack = hp + 1;
 	}
-	return (found);
+	return (0);
 }
