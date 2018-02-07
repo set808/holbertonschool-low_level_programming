@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * _puts_recursion - prints a string followed by a new line
- * @s: string to be printed
+ * _print_rev_recursion - prints a string in reverse
+ * @s: string to be reversed and printed
  *
  */
 
