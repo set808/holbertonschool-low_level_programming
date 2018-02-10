@@ -5,7 +5,7 @@
 
 /**
  * is_number - checks if a string only contains digits
- * @s - string to be checked
+ * @s: string to be checked
  *
  * Return: returns 1 if string only contains digits. returns 0 otherwise
  */
