@@ -2,6 +2,22 @@
 #include "holberton.h"
 
 /**
+ * _strlen - returns the length of a string
+ * @s: string we find the length of
+ *
+ * Return: length of the string
+ */
+
+int _strlen(char *s)
+{
+	int x = 0;
+
+	while (*(s + x) != '\0')
+		x++;
+	return (x);
+}
+
+/**
  * str_concat - concatenates two strings
  * @s1: first string
  * @s2: second string
@@ -19,14 +35,14 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	s = malloc(sizeof(*s1 + *s2));
+	s = malloc(sizeof(_strlen(s1)) + sizeof(_strlen(s2)));
 	if (s == NULL)
-		return(NULL);
+		return (NULL);
 
-	for (x = 0; s1[x]; x++)
-		s[x] = s1[x];
-	for (y = 0; s2[y] ; y++)
-		s[x + y] = s2[y];
-	s[x + y] = '\0';
+	for (x = 0; *(s1 + x); x++)
+		*(s + x) = *(s1 + x);
+	for (y = 0; *(s2 + y); y++)
+		*(s + x + y) = *(s2 + y);
+	*(s + x + y) = '\0';
 	return (s);
 }
