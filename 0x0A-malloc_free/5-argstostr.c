@@ -38,8 +38,6 @@ char *argstostr(int ac, char **av)
 
 	for (x = 0; x < ac; x++)
 	{
-		if (av[x] == NULL)
-			return (NULL);
 		length += _strlen(av[x]);
 	}
 	length += ac;
@@ -47,7 +45,6 @@ char *argstostr(int ac, char **av)
 	s = malloc(sizeof(int) * length);
 	if (s == NULL)
 	{
-		free(s);
 		return (NULL);
 	}
 
