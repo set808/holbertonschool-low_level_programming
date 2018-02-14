@@ -36,12 +36,13 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (x = 1; x < ac; x++)
+	for (x = 0; x < ac; x++)
 	{
 		if (av[x] == NULL)
 			return (NULL);
 		length += _strlen(av[x]);
 	}
+	length += ac;
 
 	s = malloc(sizeof(int) * length);
 	if (s == NULL)
@@ -50,7 +51,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (x = 1; x < ac; x++)
+	for (x = 0; x < ac; x++)
 	{
 		for (y = 0; y < _strlen(av[x]); y++)
 		{
