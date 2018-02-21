@@ -1,5 +1,7 @@
 #ifndef OP
 #define OP
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * struct op - Struct op

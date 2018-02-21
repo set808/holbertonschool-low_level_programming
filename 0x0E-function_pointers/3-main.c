@@ -1,6 +1,4 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * main - performs simple operations on two numbers
@@ -10,7 +8,7 @@
  * Return: returns the result of the operation
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int (*op)(int, int);
 
