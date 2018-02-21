@@ -10,15 +10,12 @@
 
 int main(int argc, char **argv)
 {
-	int (*op)(int, int);
-
 	if (argc != 4)
 	{
 		printf("Error");
 		exit(98);
 	}
 
-	op = get_op_func(argv[2]);
-	printf("%d\n", op(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
