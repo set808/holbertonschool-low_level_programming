@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+
 /**
  * _strlen - returns the length of a string
  * @s: string we find the length of
@@ -38,7 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 		return (NULL);
-	n = malloc(sizeof(name));
+	n = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (n  == NULL)
 	{
 		free(new_dog);
