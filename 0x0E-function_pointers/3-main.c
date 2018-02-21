@@ -20,19 +20,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (get_op_func(argv[2]) == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	if ((*argv[2] == '/' && *argv[3] == '0') ||
-	    (*argv[2] == '%' && *argv[3] == '0'))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
 	op = get_op_func(argv[2]);
 	printf("%d\n", op(atoi(argv[1]), atoi(argv[3])));
 	return (0);
