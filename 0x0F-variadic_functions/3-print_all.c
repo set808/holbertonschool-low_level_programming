@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 	blank = "";
 	sep = ", ";
 
-	while (format[i])
+	while (format && format[i])
 	{
 		j = 0;
 		while (ids[j].id)
