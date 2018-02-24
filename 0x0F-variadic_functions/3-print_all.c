@@ -80,9 +80,9 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", blank);
 				ids[j].f(args);
+				blank = sep;
 			}
 			j++;
-			blank = sep;
 		}
 		i++;
 	}
