@@ -34,7 +34,7 @@ list_t *new_node(const char *str)
 	new->str = strdup(str);
 	if (new->str == NULL)
 	{
-		free (new);
+		free(new);
 		return (NULL);
 	}
 	new->len = _strlen(new->str);
