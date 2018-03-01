@@ -32,8 +32,11 @@ list_t *new_node(const char *str)
 	if (new == NULL)
 		return (NULL);
 	new->str = strdup(str);
-	if (new->str = NULL)
+	if (new->str == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 	new->len = _strlen(new->str);
 	return (new);
 }
