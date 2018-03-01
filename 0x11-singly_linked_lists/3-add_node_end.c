@@ -17,6 +17,29 @@ int _strlen(char *s)
 }
 
 /**
+ * create_node - Creates a new node for list
+ * @str: The string to add to new node
+ *
+ * Return: The new node or NULL
+ *
+ */
+
+list_t *new_node(const char *str)
+{
+	list_t *new;
+
+	if (str == NULL)
+		return (NULL);
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
+	new->str = strdup(str);
+	new->len = _strlen(str);
+	new->next = NULL;
+	return (new);
+}
+
+/**
  * last_node - return the address of the last node in a linked list
  * @head: head of linked list
  *
@@ -44,14 +67,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *last;
 	list_t *new;
 
-	if (head == NULL)
+	if (head == NULL || str == NULL)
 		return (NULL);
-	new = malloc(sizeof(list_t));
+	new = new_node(str);
 	if (new == NULL)
 		return (NULL);
-	new->str = strdup(str);
-	new->len = _strlen(new->str);
-	new->next = NULL;
 	if (*head == NULL)
 	{
 		*head = new;
