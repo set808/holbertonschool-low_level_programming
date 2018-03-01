@@ -17,10 +17,10 @@ int _strlen(char *s)
 }
 
 /**
- * create_node - Creates a new node for list
- * @str: The string to add to new node
+ * new_node - Creates a new node for list
+ * @str: string for new node
  *
- * Return: The new node or NULL
+ * Return: returns the new node or NULL on failure
  *
  */
 
@@ -28,14 +28,13 @@ list_t *new_node(const char *str)
 {
 	list_t *new;
 
-	if (str == NULL)
-		return (NULL);
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
 	new->str = strdup(str);
+	if (new->str == NULL)
+		return (NULL);
 	new->len = _strlen(new->str);
-	new->next = NULL;
 	return (new);
 }
 
@@ -72,6 +71,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new = new_node(str);
 	if (new == NULL)
 		return (NULL);
+	new->next == NULL;
 	if (*head == NULL)
 	{
 		*head = new;

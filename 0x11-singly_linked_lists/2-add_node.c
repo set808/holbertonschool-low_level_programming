@@ -28,12 +28,12 @@ list_t *new_node(const char *str)
 {
 	list_t *new;
 
-	if (str == NULL)
-		return (NULL);
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
 	new->str = strdup(str);
+	if (new->str = NULL)
+		return (NULL);
 	new->len = _strlen(new->str);
 	return (new);
 }
