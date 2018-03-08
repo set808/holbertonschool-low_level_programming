@@ -8,8 +8,9 @@
 unsigned int binary_check(const char *b)
 {
 	unsigned int x;
+
 	x = 0;
-	while(b[x] != '\0')
+	while (b[x] != '\0')
 	{
 		if (!(b[x] ==  '1' || b[x] == '0'))
 			return (0);
@@ -30,7 +31,7 @@ unsigned int max_power(const char *b)
 	x = 0;
 	while (b[x] != '\0')
 		x++;
-	return(x - 1);
+	return (x - 1);
 }
 /**
  * _pow - returns a number to x power
