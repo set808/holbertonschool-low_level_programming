@@ -18,6 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 	result = read(fd, buf, letters);
+	if (result == -1)
+		return (0);
 	buf[letters + 1] = '\0';
 	write(1, buf, result);
 	free(buf);
