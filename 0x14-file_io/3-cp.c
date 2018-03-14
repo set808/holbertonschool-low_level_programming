@@ -25,10 +25,8 @@ int _strlen(char *s)
 int main(int ac, char *av[])
 {
 	int to_fd, from_fd, read_count, write_count;
-	char *buf = malloc(sizeof(char) * 1024);
+	char buf[1024];
 
-	if (buf == NULL)
-		return (-1);
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -43,7 +41,8 @@ int main(int ac, char *av[])
 	from_fd = open(av[1], O_RDONLY);
 	if (from_fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO,
+			"Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 
