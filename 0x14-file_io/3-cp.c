@@ -57,7 +57,7 @@ int main(int ac, char *av[])
 			exit(98);
 		}
 
-		write_count = write(to_fd, buf, _strlen(buf));
+		write_count = write(to_fd, buf, read_count);
 		if (write_count == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -66,12 +66,12 @@ int main(int ac, char *av[])
 		}
 	}
 
-	if (close(to_fd) < 0)
+	if (close(to_fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_fd);
 		exit(100);
 	}
-	if (close(from_fd) < 0)
+	if (close(from_fd)  == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_fd);
 		exit(100);
