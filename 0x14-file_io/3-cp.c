@@ -59,6 +59,7 @@ int main(int ac, char *av[])
 		}
 
 		write_count = write(to_fd, buf, _strlen(buf));
+		if (write_count == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", av[2]);
