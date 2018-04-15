@@ -30,7 +30,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	count = 0;
 	runner = *h;
-	while (count < idx)
+	while (count < idx - 1)
 	{
 		if (runner == NULL)
 			return (NULL);
