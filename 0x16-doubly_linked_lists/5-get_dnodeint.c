@@ -4,7 +4,7 @@
  * @head: head of the linked list
  * @index: the index of the node
  *
- * @Return: returns the node, or NULL if it doesn't exist.
+ * Return: returns the node, or NULL if it doesn't exist.
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {

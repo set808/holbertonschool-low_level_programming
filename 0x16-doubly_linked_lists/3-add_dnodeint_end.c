@@ -4,7 +4,7 @@
  * @head: pointer to the head of the linked lsit
  * @n: number to be stored in new node
  *
- * @Return: returns the address of the new element or NULL on failure
+ * Return: returns the address of the new element or NULL on failure
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
@@ -21,7 +21,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		new->prev = NULL;
 		new->next = NULL;
 		*head = new;
-		return(new);
+		return (new);
 	}
 
 	runner = *head;
@@ -29,6 +29,6 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		runner = runner->next;
 	runner->next = new;
 	new->prev = runner;
-	new-> next = NULL;
+	new->next = NULL;
 	return (new);
 }
