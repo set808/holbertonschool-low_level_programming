@@ -13,7 +13,7 @@ void delete_node(dlistint_t **head, dlistint_t *del_node)
 		del_node->next->prev = del_node->prev;
 	if (del_node->prev != NULL)
 		del_node->prev->next = del_node->next;
-	free (del_node);
+	free(del_node);
 }
 
 /**
@@ -21,7 +21,7 @@ void delete_node(dlistint_t **head, dlistint_t *del_node)
  * @head: head of the linked list
  * @index: index of node to delete
  *
- * @Return: returns 1 on success, -1 on failure
+ * Return: returns 1 on success, -1 on failure
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
