@@ -4,6 +4,7 @@
 /* Include Statements */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /* Struct Definitions */
 /**
