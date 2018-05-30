@@ -11,38 +11,15 @@ void swap_nodes(listint_t *a, listint_t *b)
 	if (a == b)
 		return;
 
-	if (a->next == b)
-	{
-		a->next = b->next;
-		b->prev = a->prev;
+	a->next = b->next;
+	b->prev = a->prev;
 
-		if (a->next != NULL)
-			a->next->prev = a;
-		if (b->prev != NULL)
-			b->prev->next = b;
-		b->next = a;
-		a->prev = b;
-	}
-	else
-	{
-		next = b->next;
-		prev = b->prev;
-
-		b->prev = a->prev;
-		b->next = a->next;
-
-		a->prev = prev;
-		a->next = next;
-
-		if (b->next != NULL)
-			b->next->prev = b;
-		if (b->prev != NULL)
-			b->prev->next = b;
-		if (a->next != NULL)
-			a->next->prev = a;
-		if (a->prev != NULL)
-			a->prev->next = a;
-	}
+	if (a->next != NULL)
+		a->next->prev = a;
+	if (b->prev != NULL)
+		b->prev->next = b;
+	b->next = a;
+	a->prev = b;
 }
 
 /**
@@ -55,7 +32,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *r1, *r2;
 
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
+	if (list == NULL || (*list) == NULL || (*list)->next == NULL)
 		return;
 
 	r1 = *list;
