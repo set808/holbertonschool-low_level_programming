@@ -6,8 +6,6 @@
  */
 void swap_nodes(listint_t *a, listint_t *b)
 {
-	listint_t *next, *prev;
-
 	if (a == b)
 		return;
 
