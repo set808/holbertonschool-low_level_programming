@@ -34,12 +34,10 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	r1 = (*list)->next;
-	while (r1->next != NULL)
+	while (r1 != NULL)
 	{
-		if (r1->n > r1->next->n)
+		if (r1->n < r1->prev->n)
 		{
-			swap_nodes(r1, r1->next);
-			print_list(*list);
 			r2 = r1;
 			while (r2->prev != NULL)
 			{
@@ -54,7 +52,6 @@ void insertion_sort_list(listint_t **list)
 					r2 = r2->prev;
 			}
 		}
-		else
-			r1 = r1->next;
+		r1 = r1->next;
 	}
 }
