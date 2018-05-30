@@ -7,6 +7,7 @@
 void swap_nodes(listint_t *a, listint_t *b)
 {
 	listint_t *next, *prev;
+
 	if (a == b)
 		return;
 
@@ -58,14 +59,14 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	r1 = *list;
-	while(r1->next != NULL)
+	while (r1->next != NULL)
 	{
 		if (r1->n > r1->next->n)
 		{
 			swap_nodes(r1, r1->next);
 			print_list(*list);
 			r2 = r1;
-			while (r2->prev != NULL )
+			while (r2->prev != NULL)
 			{
 				if (r2->prev->n > r2->n)
 				{
