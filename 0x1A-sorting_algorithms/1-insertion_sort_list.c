@@ -54,6 +54,9 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *r1, *r2;
 
+	if (!list)
+		return;
+
 	r1 = *list;
 	while(r1->next != NULL)
 	{
