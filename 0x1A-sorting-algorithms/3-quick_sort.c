@@ -4,7 +4,7 @@
  * @a: first index
  * @b: second index
  *
- */
+ *
 void swap(int *array, unsigned int a, unsigned int b)
 {
 	int temp;
@@ -13,6 +13,7 @@ void swap(int *array, unsigned int a, unsigned int b)
 	array[a] = array[b];
 	array[b] = temp;
 }
+*/
 
 /**
  * partition - partition algorithm
@@ -25,24 +26,30 @@ void swap(int *array, unsigned int a, unsigned int b)
  */
 unsigned int partition(int *array, int low, int high, size_t size)
 {
-	int x, y;
+	int x, y, temp;
 	int pivot;
 
 	x = low - 1;
 	pivot = array[high];
 
-	y = low;
-	while (y < high - 1)
+
+	for (y = low; y <= high - 1; y++)
 	{
-		if (array[y] < pivot)
+		if (array[y] <= pivot)
 		{
 			x++;
-			swap(array, x, y);
-			print_array(array, size);
+			if (x != y)
+			{
+				temp = array[x];
+				array[x] = array[y];
+				array[y] = temp;
+				print_array(array, size);
+			}
 		}
-		y++;
 	}
-	swap(array, x + 1, high);
+	temp = array[x + 1];
+	array[x + 1] = array[high];
+	array[high] = temp;
 	print_array(array, size);
 	return (x + 1);
 }
@@ -74,5 +81,5 @@ void qs_function(int *array, unsigned int lo, unsigned int hi, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	qs_function(array, 0, size - 2, size);
+	qs_function(array, 0, size - 1, size);
 }
