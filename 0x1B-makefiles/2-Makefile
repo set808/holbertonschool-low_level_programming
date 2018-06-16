@@ -1,0 +1,8 @@
+CC=gcc
+SRC=holberton.c main.c
+OBJ=main.o holberton.o
+NAME=holberton
+
+all: $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(SRC) -o $(NAME)
