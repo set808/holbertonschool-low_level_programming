@@ -1,7 +1,7 @@
 #include "binary_trees.h"
-/*
+/**
  * binary_tree_height - returns the height of the binary tree
- * @node: the root of the binary tree
+ * @tree: the root of the binary tree
  *
  * Return: returns the height of the tree
  */
@@ -33,25 +33,28 @@ size_t binary_tree_height(const binary_tree_t *tree)
 }
 
 #include "binary_trees.h"
-/*
+/**
  * binary_tree_is_leaf - checks if node is a leaf;
+ * @node: the node to check
+ *
+ * Return: returns 1 if node is a leaf, 0 otherwise
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
 	if (!node)
-		return 0;
+		return (0);
 	if (node->parent == NULL)
-		return 0;
-	if(node->left != NULL || node->right != NULL)
-		return 0;
+		return (0);
+	if (node->left != NULL || node->right != NULL)
+		return (0);
 	return (1);
 }
 
 
 #include "binary_trees.h"
-/*
+/**
  * binary_tree_is_perfect - checks if tree is perfect
- * @node: the root of the binary tree
+ * @tree: the root of the binary tree
  *
  * Return: returns 1 if perfect, 0 otherwise
  */
@@ -62,11 +65,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	if(tree->right && tree->left)
+	if (tree->right && tree->left)
 	{
 		if (binary_tree_height(tree->left) != binary_tree_height(tree->right))
 			return (0);
-		if (binary_tree_is_leaf(tree->left) == 1 &&  binary_tree_is_leaf(tree->right) == 1)
+		if (binary_tree_is_leaf(tree->left) == 1 &&
+		    binary_tree_is_leaf(tree->right) == 1)
 			return (1);
 	}
 
