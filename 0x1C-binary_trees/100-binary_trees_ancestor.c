@@ -30,7 +30,8 @@ size_t binary_tree_depth(const binary_tree_t *node)
  * Return: returns a pointer to the ancestor
  */
 
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+				     const binary_tree_t *second)
 {
 	const binary_tree_t *first_cp, *second_cp;
 	int first_depth, second_depth;
